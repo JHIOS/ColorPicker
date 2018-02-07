@@ -6,8 +6,7 @@
             <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
                 <meta http-equiv="X-UA-Compatible" content="edge">
                     <meta name="renderer" content="webkit">
-                        <title>XXTouch</title>
-                        <link rel="apple-touch-icon" href="/xxtouch.png">
+                        <title>ColorPicker</title>
                             <script type="text/javascript" src="js/jquery.min.js"></script>
                             <script type="text/javascript" src="js/base64.min.js"></script>
                             <script type="text/javascript" src="mdui/js/mdui.min.js"></script>
@@ -16,19 +15,18 @@
                             <script type="text/javascript" src="js/jcanvas.min.js"></script>
                             <script type="text/javascript" src="picker.js"></script>
                             <link rel="stylesheet" href="mdui/css/mdui.min.css">
-                                <link rel="stylesheet" href="css/xxtouch_web.css">
-                                    <link rel="icon" href="/xxtouch.png" type="image/png">
+                                
                                     <style>.all_canvas{background:0 0;position:absolute;left:40%;top:80px}.mdui-table td{padding-left:5px}.mdui-table th{padding-left:5px}</style></head>
     
     <body style="margin-top: 30px">
         <div class="mdui-container-fluid">
             <br>
             <div class="parent" style="display:flex">
-                <div id="all_div" style="flex:1;height:500px;overflow:auto;margin:0 auto;background-color:#F0F0F0;">
+                <div id="all_div" style="flex:1;height:500px;overflow:auto;margin:0 auto;background-color:#F0F0F0;border:1px solid #F0F0F0;">
                     <canvas id="all_canvas"></canvas>
                     <canvas id="hide_canvas" style="display:none"></canvas>
                 </div>
-                <div style="width:480px">
+                <div style="width:480px;border:1px solid #F0F0F0;">
                     <div id="message_div">
                         <div id="local_div" style="margin:0 auto">
                             <canvas id="local_canvas"></canvas>
@@ -86,15 +84,16 @@
                                         <button id="find_color_cp" data-clipboard-text="" class="cp mdui-btn mdui-ripple">拷贝</button></div>
                                 </div>
                             </div>
+                            
                             <div class="mdui-panel-item">
                                 <div class="mdui-panel-item-header">
-                                    <div class="mdui-panel-item-title">find_image</div>
+                                    <div class="mdui-panel-item-title">区域多点找色</div>
                                     <i class="mdui-panel-item-arrow mdui-icon material-icons">&#xe313;</i></div>
                                 <div class="mdui-panel-item-body">
-                                    <textarea id="find_image" style="font-family:Consolas,Monaco,monospace;width:100%;height:100px"></textarea>
+                                    <textarea id="findMultiColorInRegionFuzzy" style="font-family:Consolas,Monaco,monospace;width:100%;height:100px"></textarea>
                                     <div class="mdui-panel-item-actions">
-                                        <button id="find_image_preview" class="mdui-btn mdui-ripple">预览</button>
-                                        <button id="find_image_cp" data-clipboard-text="" class="cp mdui-btn mdui-ripple">拷贝</button></div>
+                                        <button id="findMultiColorInRegionFuzzy_preview" class="mdui-btn mdui-ripple">预览</button>
+                                        <button id="findMultiColorInRegionFuzzy_cp" data-clipboard-text="" class="cp mdui-btn mdui-ripple">拷贝</button></div>
                                 </div>
                             </div>
                         </div>

@@ -130,9 +130,27 @@ $(document).ready(function() {
                   var z = "x, y = screen.find_color(" + y + ",95," + this.range.x + "," + this.range.y + "," + this.range.x1 + "," + this.range.y1 + ")";
                   $("#find_color").html(z);
                   $("#find_color_cp").attr("data-clipboard-text", z);
-                  var v = 'x, y = screen.find_image("' + this.img + '",\n95,' + this.range.x + "," + this.range.y + "," + this.range.x1 + "," + this.range.y1 + ")";
-                  $("#find_image").html(v);
-                  $("#find_image_cp").attr("data-clipboard-text", v)
+
+
+                  var c = this.color_list[0];
+                  if (typeof(c) == "undefined") return;
+                  var y = "x, y = findMultiColorInRegionFuzzy(" + c.color + " ,\""
+                  for(x in this.color_list){
+                    if (x == 0) continue;
+                    var w = this.color_list[x];
+                    if (w.x && w.y && w.color) {
+                      y += (w.x - c.x) + "|" + (w.y - c.y) + "|" + w.color;
+                      if (x != this.color_list.length - 1) {
+                        y += ","
+                      }
+                    }
+                  }
+                  var b = document.getElementById("all_canvas");
+
+                  y += "\", 90, 0, 0," + b.width + " ," + b.height + ");";
+                  $("#findMultiColorInRegionFuzzy").html(y);
+                  $("#findMultiColorInRegionFuzzy_cp").attr("data-clipboard-text", y)
+
                   },
                   push: function(y, w) {
                   var v = this.color_list.push({

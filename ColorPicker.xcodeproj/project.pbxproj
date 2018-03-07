@@ -25,6 +25,7 @@
 		E6A96D7B2028302900DCEF5D /* NetworkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A96D792028302900DCEF5D /* NetworkUtils.m */; };
 		E6A96D7E2028304700DCEF5D /* TSUntils.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A96D7D2028304700DCEF5D /* TSUntils.m */; };
 		E6A96D81202833F800DCEF5D /* TSMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A96D80202833F800DCEF5D /* TSMenu.m */; };
+		E6FC998C202BEA97003009BD /* iproxy in Resources */ = {isa = PBXBuildFile; fileRef = E6FC998B202BEA97003009BD /* iproxy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		E6A96D7D2028304700DCEF5D /* TSUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUntils.m; sourceTree = "<group>"; };
 		E6A96D7F202833F800DCEF5D /* TSMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSMenu.h; sourceTree = "<group>"; };
 		E6A96D80202833F800DCEF5D /* TSMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSMenu.m; sourceTree = "<group>"; };
+		E6FC998B202BEA97003009BD /* iproxy */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = iproxy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		906F131F2026180B00695273 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E6FC998B202BEA97003009BD /* iproxy */,
 				906F14E92028A0AB00695273 /* AppIcon.icns */,
 				906F13202026180B00695273 /* main.m */,
 			);
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				906F14EA2028A0AB00695273 /* AppIcon.icns in Resources */,
+				E6FC998C202BEA97003009BD /* iproxy in Resources */,
 				906F14E82026229B00695273 /* web in Resources */,
 				906F13262026180B00695273 /* Assets.xcassets in Resources */,
 				906F13292026180B00695273 /* Main.storyboard in Resources */,

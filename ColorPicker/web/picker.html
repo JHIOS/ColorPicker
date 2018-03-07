@@ -11,7 +11,6 @@
                             <script type="text/javascript" src="js/base64.min.js"></script>
                             <script type="text/javascript" src="mdui/js/mdui.min.js"></script>
                             <script type="text/javascript" src="js/clipboard.min.js"></script>
-                            <script type="text/javascript" src="js/xxtouch_web.js"></script>
                             <script type="text/javascript" src="js/jcanvas.min.js"></script>
                             <script type="text/javascript" src="picker.js"></script>
                             <link rel="stylesheet" href="mdui/css/mdui.min.css">
@@ -54,6 +53,18 @@
                         <br/>
 
                         <div class="mdui-panel" style="margin-left:8px;width:448px" mdui-panel>
+
+                            <div class="mdui-panel-item">
+                                <div class="mdui-panel-item-header">
+                                    <div class="mdui-panel-item-title">区域多点找色</div>
+                                    <i class="mdui-panel-item-arrow mdui-icon material-icons">&#xe313;</i></div>
+                                <div class="mdui-panel-item-body">
+                                    <textarea id="findMultiColorInRegionFuzzy" style="font-family:Consolas,Monaco,monospace;width:100%;height:100px"></textarea>
+                                    <div class="mdui-panel-item-actions">
+                                        <button id="findMultiColorInRegionFuzzy_preview" class="mdui-btn mdui-ripple">预览</button>
+                                        <button id="findMultiColorInRegionFuzzy_cp" data-clipboard-text="" class="cp mdui-btn mdui-ripple">拷贝</button></div>
+                                </div>
+                            </div>
                             <div class="mdui-panel-item">
                                 <div class="mdui-panel-item-header">
                                     <div class="mdui-panel-item-title">颜色表</div>
@@ -85,17 +96,7 @@
                                 </div>
                             </div>
                             
-                            <div class="mdui-panel-item">
-                                <div class="mdui-panel-item-header">
-                                    <div class="mdui-panel-item-title">区域多点找色</div>
-                                    <i class="mdui-panel-item-arrow mdui-icon material-icons">&#xe313;</i></div>
-                                <div class="mdui-panel-item-body">
-                                    <textarea id="findMultiColorInRegionFuzzy" style="font-family:Consolas,Monaco,monospace;width:100%;height:100px"></textarea>
-                                    <div class="mdui-panel-item-actions">
-                                        <button id="findMultiColorInRegionFuzzy_preview" class="mdui-btn mdui-ripple">预览</button>
-                                        <button id="findMultiColorInRegionFuzzy_cp" data-clipboard-text="" class="cp mdui-btn mdui-ripple">拷贝</button></div>
-                                </div>
-                            </div>
+ 
                         </div>
                         <br>
 

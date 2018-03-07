@@ -531,7 +531,7 @@ $(document).ready(function() {
                   var v = document.getElementById("all_canvas").getContext("2d");
                   t = new Image();
                   t.crossOrigin = "anonymous";
-                  t.src = "read.jpg";
+                  t.src = "read.png";
                   if (imgData){
                     t.src = imgData;
                   }

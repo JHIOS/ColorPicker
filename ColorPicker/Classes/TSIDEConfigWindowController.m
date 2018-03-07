@@ -43,6 +43,13 @@
 - (IBAction)submitAction:(NSButton *)sender {
     
     NSString *deviceIP = [NSString stringWithFormat:@"%@:%@",self.ipTextFiled.stringValue,self.portTextFiled.stringValue];
+    if ([self.ipTextFiled.stringValue isEqualToString:@"127.0.0.1"]) {
+        NSString *iproxyPath = [[NSBundle mainBundle] pathForResource:@"iproxy" ofType:nil];
+        NSString *port = self.portTextFiled.stringValue;
+        NSString *cmd = [NSString stringWithFormat:@"%@ %@ %@ &",iproxyPath,port,port];
+        system(cmd.UTF8String);
+    }
+    
     NSString *urlString = [NSString stringWithFormat:@"http:%@/deviceid",deviceIP];
 
     self.statusTextFiled.hidden = NO;
